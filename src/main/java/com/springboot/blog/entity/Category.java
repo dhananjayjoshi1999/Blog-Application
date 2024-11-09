@@ -3,6 +3,7 @@ package com.springboot.blog.entity;
 
 import jakarta.persistence.*;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 import java.util.ArrayList;
@@ -18,10 +19,11 @@ import java.util.List;
 public class Category {
 
     @Id
+    @NotNull
     @GeneratedValue(
             strategy = GenerationType.IDENTITY
     )
-    private Long id;
+    private long id;
     private String name;
     private String description;
 
